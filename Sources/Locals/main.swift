@@ -1,6 +1,7 @@
 import Foundation
 import CommandLineKit
 import Rainbow
+import LocalsKit
 
 let cli = CommandLineKit.CommandLine()
 
@@ -48,9 +49,15 @@ print("File path is \(projectOption.value!)".red.bold)
 
 if help.value {
     cli.printUsage()
+
     exit(EX_OK)
+   
 }
 
 let project = projectOption.value ?? "."
 
 let fileExtensions = "strings"
+
+    Foo().bar()
+
+
