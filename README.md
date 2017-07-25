@@ -1,2 +1,2 @@
 # Locals
-A tool for Localizable.
+A command line tool to xcode Localizable.
