@@ -41,4 +41,11 @@ extension RegexStringsSearcher {
         return result
     }
 }
+struct SwiftSearcher: RegexStringsSearcher {
+    let patterns: [String] = ["\"(.*?)\"(?=\\s*\\=)"]
+}
+
+struct OtherSearcher: RegexStringsSearcher {
+    let patterns: [String] = ["\"(.*?)\"(?=\\s*\\=)"]
+}
 
