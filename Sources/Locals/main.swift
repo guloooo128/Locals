@@ -2,6 +2,7 @@ import Foundation
 import CommandLineKit
 import Rainbow
 import LocalsKit
+import PathKit
 
 let cli = CommandLineKit.CommandLine()
 
@@ -45,19 +46,11 @@ do {
     exit(EX_USAGE)
 }
 
-print("File path is \(projectOption.value!)".red.bold)
+let locals = Locals(procjectPath: Path.current.string, excludedPaths: [])
+let result = locals.searchLocalizableNames(at: Path.current)
+locals.createLocalizableFile(result)
+print(result)
 
-if help.value {
-    cli.printUsage()
 
-    exit(EX_OK)
-   
-}
-
-let project = projectOption.value ?? "."
-
-let fileExtensions = "strings"
-
-    Foo().bar()
 
 

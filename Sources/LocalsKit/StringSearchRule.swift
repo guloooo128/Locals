@@ -15,7 +15,6 @@ protocol StringsSearcher {
 
 protocol RegexStringsSearcher: StringsSearcher {
     var patterns: [String] { get }
-    
 }
 
 extension RegexStringsSearcher {
@@ -27,9 +26,7 @@ extension RegexStringsSearcher {
                 print("Failed to create regular expression: \(pattern)")
                 continue
             }
-            
-            
-            
+
             let matches = regex.matches(in: content, options: [], range: content.fullRange)
             
             for checkingResult in matches {
@@ -41,11 +38,8 @@ extension RegexStringsSearcher {
         return result
     }
 }
-struct SwiftSearcher: RegexStringsSearcher {
-    let patterns: [String] = ["\"(.*?)\"(?=\\s*\\=)"]
-}
 
-struct OtherSearcher: RegexStringsSearcher {
-    let patterns: [String] = ["\"(.*?)\"(?=\\s*\\=)"]
+struct SwiftSearcher: RegexStringsSearcher {
+    let patterns: [String] = ["\"([^\t\n\r\";]*?)\"(?=\\s*\\=)"]
 }
 

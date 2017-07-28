@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  DBC
+
+  Created by Gollum-Mac on 2017/1/5.
+  Copyright © 2017年 Gollum-Mac. All rights reserved.
+*/
+//(\"(.*?)\")(?=\s+\=)
+"TabBar.Lecture"                   = "Webinar";
+"TabBar.News"                      = "Career Hacks";
+"TabBar.Course"                    = "Course";
+"TabBar.MenteePortal"              = "Mentee portal";
+"TabBar.MentorPortal"              = "Mentor portal";
+"TabBar.Portal"                    = "Portal";
+
+
+"News.Lecture.mentee"                   = "Webinar";
+"News.News.mentor"                      = "Career Hacks";
+"News.Course"                    = "Course";
+"News.MentorPortal.Course1"              = "Mentee portal";
+"News.MentorPortal.Course2"              = "Mentor portal";
+"News.Portal"                    = "Portal";
+
+"username"="username"
+"password"="password"
